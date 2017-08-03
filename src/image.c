@@ -224,7 +224,7 @@ void draw_detections(image im, int num, float thresh, box *boxes, float **probs,
             int bot   = (b.y+b.h/2.)*im.h; // y2
 
             // This is the key output we're after to parse and play with
-            printf("%s,%.2f,%d,%d,%d,%d \n", names[class], prob, left, top, right, bot);
+            printf("%s,%f,%d,%d,%d,%d \n", names[class], prob, left, top, right, bot);
 
             if(left < 0) left = 0;
             if(right > im.w-1) right = im.w-1;
